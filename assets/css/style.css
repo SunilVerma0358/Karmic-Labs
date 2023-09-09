@@ -20,6 +20,10 @@
                         .container {
                             max-width: 1140px !important;
                         }
+                        
+                        .overflow_hidden {
+                            overflow: hidden;
+                        }
                         /* ---body_bg---- */
                         
                         .bg_img {
@@ -57,19 +61,18 @@
                         /*----------navbar-------- */
                         
                         .nav_btn {
-                            border: 2px solid transparent;
                             padding: 12px 32px;
                             border-radius: 82px;
-                            background: transparent;
-                            color: var(--white);
-                            border: 1px solid white;
+                            background-color: var(--white);
+                            color: var(--black);
+                            border: 2px solid transparent;
                             transition: all linear 300ms;
                         }
                         
                         .nav_btn:hover {
-                            color: var(--black);
-                            background-color: var(--white);
-                            border: 1px solid transparent;
+                            color: var(--white);
+                            background-color: var(--black);
+                            border: 1px solid white;
                         }
                         
                         .nav_bar {
@@ -102,11 +105,11 @@
                         .icon_box {
                             width: 30px;
                             height: 30px;
-                            cursor: pointer;
                             position: fixed;
                             top: 2%;
-                            right: 2%;
-                            z-index: 6;
+                            right: 3%;
+                            cursor: pointer;
+                            z-index: 3;
                         }
                         
                         .icon_box span {
@@ -122,12 +125,13 @@
                             position: fixed;
                             width: 100%;
                             height: 100vh;
-                            background-color: #030F1B;
+                            background-color: var(--gray-light);
                             top: 0;
                             right: -100%;
                             justify-content: center;
                             transition: all 400ms linear;
-                            z-index: 5;
+                            z-index: 2;
+                            padding: 12px 0px;
                         }
                         
                         .show {
@@ -136,10 +140,10 @@
                         /*------------hero_section---------- */
                         
                         .bg_hero_img {
-                            background-image: url('../image/first_bg_img.png');
+                            background-image: url('../image/bg_img.png');
+                            background-position: center;
                             background-repeat: no-repeat;
-                            background-size: cover;
-                            opacity: 0.8;
+                            background-size: 100% 100%;
                         }
                         
                         .get_btn {
@@ -176,33 +180,11 @@
                             color: black;
                             background-color: white;
                         }
+                        
+                        .phara_first {
+                            line-height: 140%;
+                        }
                         /* ---------upcoming-section-------- */
-                        
-                        .upcoming {
-                            position: relative;
-                        }
-                        
-                        .upcoming::before {
-                            content: '';
-                            position: absolute;
-                            left: 32%;
-                            bottom: 0;
-                            width: 100px;
-                            height: 1px;
-                            background-color: #FFF;
-                            transform: rotate(175deg);
-                        }
-                        
-                        .upcoming::after {
-                            content: '';
-                            position: absolute;
-                            top: 0%;
-                            left: 39%;
-                            width: 100px;
-                            height: 1px;
-                            background-color: #FFF;
-                            transform: rotate(175deg);
-                        }
                         
                         .box_shadow {
                             border-radius: 12px;
@@ -218,7 +200,7 @@
                         }
                         
                         .box_shadow:hover .img_box {
-                            transform: scale(110%);
+                            transform: scale(105%);
                         }
                         
                         .btn_view {
@@ -234,32 +216,6 @@
                             background-color: #fff;
                         }
                         /* -----------services-section----------- */
-                        
-                        .services {
-                            position: relative;
-                        }
-                        
-                        .services::before {
-                            content: '';
-                            position: absolute;
-                            left: 30%;
-                            bottom: -14%;
-                            width: 170px;
-                            height: 1px;
-                            background-color: #FFF;
-                            transform: rotate(175deg);
-                        }
-                        
-                        .services::after {
-                            content: '';
-                            position: absolute;
-                            top: -23%;
-                            left: 40%;
-                            width: 170px;
-                            height: 1px;
-                            background-color: #FFF;
-                            transform: rotate(175deg);
-                        }
                         
                         .moon-light {
                             display: none;
@@ -286,7 +242,7 @@
                         
                         .box {
                             position: relative;
-                            padding: 16px;
+                            padding: 20px;
                             border: 1px solid transparent;
                         }
                         /* ---------projects-section--------- */
@@ -351,11 +307,11 @@
                         
                         .card1:hover .content * {
                             opacity: 1;
-                            transform: translateY(0);
+                            transform: translateY(20%);
                         }
                         
                         .card1:hover {
-                            transform: scale(110%, 110%);
+                            transform: scale(103%, 103%);
                             z-index: 1;
                         }
                         /* ---------about-section------- */
@@ -368,7 +324,7 @@
                             content: '';
                             position: absolute;
                             left: 30%;
-                            bottom: 0%;
+                            bottom: 0px;
                             width: 160px;
                             height: 1px;
                             background-color: #fff;
@@ -378,7 +334,7 @@
                         .about::after {
                             content: '';
                             position: absolute;
-                            top: -10%;
+                            top: -15%;
                             left: 40%;
                             width: 160px;
                             height: 1px;
@@ -387,11 +343,15 @@
                         }
                         
                         .img_hover {
-                            transition: all linear 400ms;
+                            transition: all linear 300ms;
+                            border: 2px solid transparent;
                         }
                         
                         .img_hover:hover {
-                            transform: scale(105%);
+                            border-radius: 8px;
+                            border: 1px solid rgba(255, 255, 255, 0.20);
+                            background: lightgray 50% / cover no-repeat;
+                            box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.10);
                         }
                         /* -----------footer---------- */
                         
@@ -414,6 +374,14 @@
                         
                         .shadow:hover {
                             transform: translateY(-30%);
+                        }
+                        
+                        .insta_hover>svg path {
+                            transition: all linear 300ms;
+                        }
+                        
+                        .shadow:hover.insta_hover>svg path {
+                            fill: #f14562;
                         }
                         
                         .img_hover svg path {
@@ -478,18 +446,18 @@
                         /*---------media query------- */
                         
                         @media (min-width:576px) {
+                            .bg_white_img {
+                                background-image: url('../image/third_img.png');
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                background-color: unset;
+                            }
                             /* hero-section */
                             .get_btn {
                                 padding: 12px 24px;
                             }
                             .read_more {
                                 padding: 12px 32px;
-                            }
-                            .bg_white_img {
-                                background-image: url('../image/third_img.png');
-                                background-repeat: no-repeat;
-                                background-size: 100% 100%;
-                                background-color: unset;
                             }
                             /* upcoming-section */
                             .upcoming {
@@ -502,6 +470,9 @@
                             .upcoming::after {
                                 width: 330px;
                                 transform: rotate(175deg);
+                            }
+                            .box_shadow:hover .img_box {
+                                transform: scale(103%);
                             }
                             /* about-section */
                             .about {
@@ -538,8 +509,58 @@
                         @media (min-width:768px) {
                             .moon-light {
                                 position: absolute;
-                                left: 83%;
-                                top: -3%;
+                                left: 85%;
+                                top: -7%;
+                            }
+                            .box_shadow:hover .img_box {
+                                transform: scale(107%);
+                            }
+                            /* services */
+                            .services {
+                                position: relative;
+                            }
+                            .services::before {
+                                content: '';
+                                position: absolute;
+                                left: 30%;
+                                bottom: -14%;
+                                width: 320px;
+                                height: 1px;
+                                background-color: #FFF;
+                                transform: rotate(175deg);
+                            }
+                            .services::after {
+                                content: '';
+                                position: absolute;
+                                top: -25%;
+                                left: 37%;
+                                width: 320px;
+                                height: 1px;
+                                background-color: #FFF;
+                                transform: rotate(175deg);
+                            }
+                            .upcoming {
+                                position: relative;
+                            }
+                            .upcoming::before {
+                                content: '';
+                                position: absolute;
+                                left: 33%;
+                                bottom: 3%;
+                                width: 320px;
+                                height: 1px;
+                                background-color: #FFF;
+                                transform: rotate(175deg);
+                            }
+                            .upcoming::after {
+                                content: '';
+                                position: absolute;
+                                top: 2%;
+                                left: 39%;
+                                width: 320px;
+                                height: 1px;
+                                background-color: #FFF;
+                                transform: rotate(175deg);
                             }
                         }
                         
@@ -570,7 +591,7 @@
                             .moon-light {
                                 position: absolute;
                                 left: 77%;
-                                top: -4%;
+                                top: -15%;
                             }
                             /* --project-section-- */
                             .porjects {
@@ -600,7 +621,60 @@
                                 transform: scale(120%, 110%);
                             }
                             .card1:hover {
-                                transform: scale(120%, 110%);
+                                transform: scale(118%, 107%);
                                 z-index: 1;
+                            }
+                            .box_shadow:hover .img_box {
+                                transform: scale(110%);
+                            }
+                            .services {
+                                position: relative;
+                            }
+                            .services::before {
+                                content: '';
+                                position: absolute;
+                                left: 33%;
+                                bottom: -14%;
+                                width: 320px;
+                                height: 1px;
+                                background-color: #FFF;
+                                transform: rotate(175deg);
+                            }
+                            .services::after {
+                                content: '';
+                                position: absolute;
+                                top: -25%;
+                                left: 38%;
+                                width: 320px;
+                                height: 1px;
+                                background-color: #FFF;
+                                transform: rotate(175deg);
+                            }
+                            /* about */
+                            .about {
+                                position: relative;
+                            }
+                            .about::before {
+                                content: '';
+                                position: absolute;
+                                left: 40%;
+                                bottom: 2px;
+                                width: 250px;
+                                height: 1px;
+                                background-color: #fff;
+                                transform: rotate(175deg);
+                            }
+                            .about::after {
+                                content: '';
+                                position: absolute;
+                                top: -15%;
+                                left: 40%;
+                                width: 250px;
+                                height: 1px;
+                                background-color: #fff;
+                                transform: rotate(175deg);
+                            }
+                            .phara_first {
+                                line-height: 180%;
                             }
                         }
